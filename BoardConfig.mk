@@ -51,7 +51,7 @@ BOARD_CUSTOM_USB_CONTROLLER := ../../device/lge/p350/netd/UsbController.cpp
 BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
 
 # VER_0_6_X does not search networks
-WPA_SUPPLICANT_VERSION := VER_0_5_X
+WPA_SUPPLICANT_VERSION := VER_0_6_X
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
 BOARD_WLAN_DEVICE := bcm4329
 WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/wireless.ko"
@@ -60,6 +60,7 @@ WIFI_DRIVER_MODULE_NAME := wireless
 WIFI_DRIVER_FW_STA_PATH := "/system/etc/wl/rtecdc.bin"
 WIFI_DRIVER_FW_AP_PATH := "/system/etc/wl/rtecdc-apsta.bin"
 WIFI_DRIVER_HAS_LGE_SOFTAP := true
+BOARD_WEXT_NO_COMBO_SCAN := true
 
 BOARD_KERNEL_CMDLINE := mem=215M console=ttyMSM2,115200n8 androidboot.hardware=p350
 BOARD_KERNEL_BASE := 0x02808000
