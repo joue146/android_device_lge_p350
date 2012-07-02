@@ -35,6 +35,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/p350/files/init.p350.rc:root/init.p350.rc \
     device/lge/p350/files/ueventd.p350.rc:root/ueventd.p350.rc \
+    device/lge/p350/files/etc/init.local.rc:/system/etc/init.local.rc
     device/lge/p350/files/init.lge.hidden_reset.sh:root/init.lge.hidden_reset.sh \
     #device/lge/p350/files/init.qcom.post_boot.sh:root/init.qcom.post_boot.sh \
     #device/lge/p350/files/init.qcom.rc:root/init.qcom.rc \
