@@ -30,6 +30,9 @@ wifi.supplicant_scan_interval=60
 # opengles 2.0
 ro.opengles.version=131072
 
+#ro.ril.ecclist=112,911
+ro.ril.hsxpa=2
+ro.ril.gprsclass=10
 # media
 ro.media.enc.hprof.file.format=mp4
 ro.media.enc.hprof.codec.vid=m4v
