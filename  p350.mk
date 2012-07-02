@@ -46,6 +46,11 @@ PRODUCT_COPY_FILES += \
     device/lge/p350/configs/touch_mcs7000.kl:system/usr/keylayout/touch_mcs7000.kl \
     device/lge/p350/configs/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
 
+#Misc 
+    device/lge/p350/files/lib/modules/tun.ko:system/lib/modules/tun.ko \
+    device/lge/p350/files/lib/modules/cifs.ko:system/lib/modules/cifs.ko \
+    device/lge/p350/files/lib/modules/fuse.ko:system/lib/modules/fuse.ko \
+
 # BT startup
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/init.qcom.bt.sh:system/bin/init.qcom.bt.sh
