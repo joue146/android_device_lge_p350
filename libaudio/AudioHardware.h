@@ -26,8 +26,8 @@
 #include <hardware_legacy/AudioHardwareBase.h>
 
 extern "C" {
-#include "msm_audio.h"
-#include "msm_audio_voicememo.h"
+#include <msm_audio.h>
+#include <msm_audio_voicememo.h>
 }
 
 namespace android {
@@ -154,7 +154,6 @@ enum tty_modes {
 #define AUDIO_HW_IN_BUFFERSIZE 2048                 // Default audio input buffer size
 #define AUDIO_HW_IN_FORMAT (AudioSystem::PCM_16_BIT)  // Default audio input sample format
 // ----------------------------------------------------------------------------
-
 
 class AudioHardware : public  AudioHardwareBase
 {
@@ -309,15 +308,12 @@ private:
             msm_snd_endpoint *mSndEndpoints;
             int mNumSndEndpoints;
             int mCurSndDevice;
-	    int mFmRadioEnabled;
-	    int mFmPrev;
-	    int mFmVolume;
+#ifdef HAVE_FM_RADIO
+            bool mFmRadioEnabled;
+#endif
             int m7xsnddriverfd;
-            int fmfd;
             bool        mDualMicEnabled;
             int         mTtyMode;
-
-            bool        mBuiltinMicSelected;
 
      friend class AudioStreamInMSM72xx;
             Mutex       mLock;

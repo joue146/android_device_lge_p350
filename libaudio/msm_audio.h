@@ -343,7 +343,7 @@ struct msm_snd_set_loopback_mode_param {
 /* LGE_CHANGE_S, [junyoub.an] , 2010-02-19, For audio cal tool.*/
 
 typedef enum {
-  VOC_CODEC_SPEAKER_MEDIA					= 0,  	/* BT Intercom                      */
+  VOC_CODEC_SPEAKER_MEDIA					= 0,  	/* BT Intercom                      */	
   VOC_CODEC_STEREO_HEADSET_LOOPBACK		    = 1, 	 	/* On Chip Codec Channel 2          */
   VOC_CODEC_STEREO_HEADSET					= 2,  	/* On Chip Codec Channels 1 and 2   */
   VOC_CODEC_STEREO_HEADSET_MEDIA			= 3,  	/* On Chip Codec Aux. Channel       */
@@ -353,7 +353,7 @@ typedef enum {
   VOC_CODEC_SPEAKER_HEADSET				    = 7,  	/* BT local audio path              */
   VOC_CODEC_VOICE_RECORDER					= 8,
   VOC_CODEC_FM_RADIO_HEADSET_MEDIA			= 9,     /* FM_RADIO HEADSET*/
-  VOC_CODEC_FM_RADIO_SPEAKER_MEDIA			= 10,  /* FM_RADIO SPEAKER*/
+  VOC_CODEC_FM_RADIO_SPEAKER_MEDIA			= 10,  /* FM_RADIO SPEAKER*/ 
   VOC_CODEC_OFF_BOARD			    		= 11,
   VOC_CODEC_BT_HEADSET					    = 12, 	/* Aux. Codec                       */
   VOC_CODEC_A2DP_BT_HEADSET					= 13, 	/* Stereo DAC                       */
@@ -364,7 +364,7 @@ typedef enum {
   VOC_CODEC_RX_EXT_SDAC_TX_INTERNAL 			= 18,	/* External Stereo DAC and Tx Internal */
   VOC_CODEC_IN_STEREO_SADC_OUT_MONO_HANDSET 	= 19,	/* Stereo line in Mono out	  */
   VOC_CODEC_IN_STEREO_SADC_OUT_STEREO_HEADSET	= 20,	/* Stereo line in STEREO out  */
-  VOC_CODEC_TX_INT_SADC_RX_EXT_AUXPCM			= 21,	/* Stereo line in, AUX_PCM out*/
+  VOC_CODEC_TX_INT_SADC_RX_EXT_AUXPCM			= 21,	/* Stereo line in, AUX_PCM out*/ 
   VOC_CODEC_EXT_STEREO_SADC_OUT_MONO_HANDSET	= 22,	/* Stereo line in Mono out	 */
   VOC_CODEC_EXT_STEREO_SADC_OUT_STEREO_HEADSET	= 23,	/* Stereo line in STEREO out */
   VOC_CODEC_USB 								= 24,	/* USB off-board codec				*/
@@ -376,8 +376,8 @@ typedef enum {
 } voc_codec_type;
 
 #if 0
-typedef enum
-{
+typedef enum 
+{ 
 	EC_MODE,				/* 0 */
 	NS_ENABLE,
 	TX_GAIN,
@@ -399,7 +399,7 @@ typedef enum
 	RX_FILTER_TAP4,
 	RX_FILTER_TAP5,
 	RX_FILTER_TAP6,		/* 20 */
-#ifdef FEATURE_AUDIO_AGC
+#ifdef FEATURE_AUDIO_AGC	
 	RX_AGC_STATIC_GAIN,
 	RX_AGC_AIG,
 	RX_AGC_EXP_THRES,
@@ -415,8 +415,8 @@ typedef enum
 	TX_AGC_COMPR_THRES,
 	TX_AGC_COMPR_SLOPE,
 #ifdef FEATURE_LGE_SND_AGC_EXP
-	RX_AGC_RMS_TAV,
-	RX_AGC_ATTACK_K,
+	RX_AGC_RMS_TAV,  
+	RX_AGC_ATTACK_K, 
 	RX_AGC_RELEASE_K,
 	RX_AGC_DELAY,
 	RX_AGC_AIG_LEAK_RATE_SLOW,
@@ -514,7 +514,7 @@ typedef enum{
   TX_STAGE5_A2,
   TX_STAGE5_B0,
   TX_STAGE5_B1,
-  TX_STAGE5_B2,
+  TX_STAGE5_B2, 
   IIR_PARAM_MAX,
 }voccal_iir_filter_type;
 
@@ -666,7 +666,7 @@ struct msm_snd_set_hook_mode_param {
 /* LGE_CHANGE_S, [junyoub.an] , 2010-02-28, for hook key*/
 #define SND_SET_HOOK_MODE _IOWR(SND_IOCTL_MAGIC, 20, struct msm_snd_set_hook_mode_param *)
 /* LGE_CHANGE_S, [junyoub.an] , 2010-09-05, To control amp*/
-#if defined (CONFIG_MACH_MSM7X27_THUNDERG) || defined(CONFIG_MACH_MSM7X27_PECAN) || defined(CONFIG_MACH_MSM7X27_HAZEL) /* pecan porting same as thunderg by bongkyu.kim */
+#if defined (CONFIG_MACH_MSM7X27_THUNDERG)
 #define SND_SET_AMP_CONTROL _IOWR(SND_IOCTL_MAGIC, 21, struct msm_snd_set_hook_mode_param *)
 #endif
 /* LGE_CHANGE_E, [junyoub.an] , 2010-09-05, To control amp*/
