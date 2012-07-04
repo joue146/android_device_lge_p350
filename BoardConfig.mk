@@ -1,5 +1,6 @@
 USE_CAMERA_STUB := false
 BOARD_USE_FROYO_LIBCAMERA := true
+BOARD_LIBCAMERA_MISSING_AUTOFOCUS := true
 
 # inherit from the proprietary version
 -include vendor/lge/p350/BoardConfigVendor.mk
