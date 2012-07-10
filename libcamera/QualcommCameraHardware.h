@@ -19,7 +19,7 @@
 **
 ** All alterations done to this file to add support for the Z71 terminal
 ** are intended for use with CyanogenMod. This includes all the support
-** for ov5642, and the reverse engineered bits like ioctls and EXIF 
+** for ov5642, and the reverse engineered bits like ioctls and EXIF
 ** referred to below as "Values originally from proprietary headers")
 ** Please do not change the EXIF header without asking me first.
 */
@@ -71,16 +71,16 @@ struct board_property{
 #define CAMERA_MIN_CONTRAST 0
 #define CAMERA_MAX_CONTRAST 4
 #define CAMERA_MIN_SHARPNESS 0
-#define CAMERA_MIN_EXPOSURE_COMPENSATION 0
+#define CAMERA_MIN_EXPOSURE_COMPENSATION -2
 #define CAMERA_MAX_SHARPNESS 4
 #define CAMERA_MIN_SATURATION 0
 #define CAMERA_MAX_SATURATION 4
-#define CAMERA_MAX_EXPOSURE_COMPENSATION 8
+#define CAMERA_MAX_EXPOSURE_COMPENSATION 5
 #define CAMERA_DEF_SHARPNESS 2
 #define CAMERA_DEF_CONTRAST 3
 #define CAMERA_DEF_SATURATION 2
-#define CAMERA_DEF_EXPOSURE_COMPENSATION "2.0"
-#define CAMERA_EXPOSURE_COMPENSATION_STEP 2
+#define CAMERA_DEF_EXPOSURE_COMPENSATION "0.0"
+#define CAMERA_EXPOSURE_COMPENSATION_STEP 1
 
 #define CEILING16(x) (x&0xfffffff0)
 #define PAD_TO_WORD(x) ((x&1) ? x+1 : x)
@@ -101,7 +101,7 @@ typedef struct {
 	unsigned int out2_w;
 	unsigned int in2_h;
 	unsigned int out2_h;
-	uint8_t update_flag; 
+	uint8_t update_flag;
 } common_crop_t;
 
 typedef uint8_t cam_ctrl_type;

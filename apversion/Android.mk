@@ -1,4 +1,4 @@
-# Copyright (C) 2011 The CyanogenMod project
+# Copyright (C) 2012 The CyanogenMod project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,10 +18,10 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
 
-LOCAL_SRC_FILES := getmac.c
+LOCAL_SRC_FILES := apversion.c
 
 LOCAL_PRELINK_MODULE := false
 LOCAL_SHARED_LIBRARIES := libcutils
-LOCAL_MODULE := hwaddrs
+LOCAL_MODULE := lgapversion
 
 include $(BUILD_EXECUTABLE)
