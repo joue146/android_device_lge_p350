@@ -1,5 +1,5 @@
 #
-# system.prop for p350
+# system.prop for p250
 #
 
 # lcd
@@ -30,9 +30,6 @@ wifi.supplicant_scan_interval=60
 # opengles 2.0
 ro.opengles.version=131072
 
-#ro.ril.ecclist=112,911
-ro.ril.hsxpa=2
-ro.ril.gprsclass=10
 # media
 ro.media.enc.hprof.file.format=mp4
 ro.media.enc.hprof.codec.vid=m4v
@@ -93,6 +90,25 @@ persist.cust.tel.eons=1
 #change suggested by danieliop from xda
 ro.media.lprof.vid.fps=24
 
+# Graphics
+view.fading_edge_length=8
+view.minimum_fling_velocity=25
+view.scroll_friction=0.008
+view.touch_slop=20
+persist.sys.use_dithering=1
+persist.sys.purgeable_assets=1
+persist.sys.use_16bpp_alpha=1
+persist.sys.scrollingcache=3
+# Disable ICS rotation animation, it's too slow
+persist.sys.rotationanimation=false
+
+# No Autofocus device
+ro.workaround.noautofocus=1
+
 # System and Misc.
+dalvik.vm.execution-mode=int:jit
 ro.compcache.default=18
 ro.com.google.locationfeatures=0
+ro.tether.denied=false
+sys.checkfs.fat=false
+ro.vold.umsdirtyratio=20
