@@ -93,6 +93,9 @@ persist.cust.tel.eons=1
 #change suggested by danieliop from xda
 ro.media.lprof.vid.fps=24
 
+# Disable ICS rotation animation To Fix Reboot 
+persist.sys.rotationanimation=false
+
 # System and Misc.
 ro.compcache.default=18
 ro.com.google.locationfeatures=0
