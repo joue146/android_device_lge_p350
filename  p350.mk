@@ -14,18 +14,15 @@ PRODUCT_PACKAGES += \
     libmm-omxcore \
     libOmxCore \
     libOmxVidEnc \
-    com.android.future.usb.accessory \
     LiveWallpapers \
     LiveWallpapersPicker \
     FM \
     gps.p350\
     gralloc.p350\
-    gadget_id \
     bash \
     dexpreopt \
     hwaddrs \
-    copybit.p350 \
-    lights.p350
+    lgapversion
 
 # Publish that we support the live wallpaper feature.
 PRODUCT_COPY_FILES += \
@@ -33,13 +30,10 @@ PRODUCT_COPY_FILES += \
 
 # Board-specific init
 PRODUCT_COPY_FILES += \
-    device/lge/p350/files/init.p350.rc:root/init.p350.rc \
-    device/lge/p350/files/ueventd.p350.rc:root/ueventd.p350.rc \
-    device/lge/p350/files/etc/init.local.rc:/system/etc/init.local.rc
-    device/lge/p350/files/init.lge.hidden_reset.sh:root/init.lge.hidden_reset.sh \
-    #device/lge/p350/files/init.qcom.post_boot.sh:root/init.qcom.post_boot.sh \
-    #device/lge/p350/files/init.qcom.rc:root/init.qcom.rc \
-    #device/lge/p350/files/init.p350.rc:root/init.p350.rc \
+    device/lge/p350/init.p350.rc:root/init.p350.rc \
+    device/lge/p350/ueventd.p350.rc:root/ueventd.p350.rc \
+    device/lge/p350/init.local.rc:/system/etc/init.local.rc
+    #device/lge/p350/init.p350.rc:root/init.p350.rc \
 
 #Configs
 PRODUCT_COPY_FILES += \
@@ -48,9 +42,9 @@ PRODUCT_COPY_FILES += \
     device/lge/p350/configs/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
 
 #Misc 
-    device/lge/p350/files/lib/modules/tun.ko:system/lib/modules/tun.ko \
-    device/lge/p350/files/lib/modules/cifs.ko:system/lib/modules/cifs.ko \
-    device/lge/p350/files/lib/modules/fuse.ko:system/lib/modules/fuse.ko \
+    device/lge/p350/prebuilt/tun.ko:system/lib/modules/tun.ko \
+    device/lge/p350/prebuilt/cifs.ko:system/lib/modules/cifs.ko \
+    device/lge/p350/prebuilt/fuse.ko:system/lib/modules/fuse.ko \
 
 # BT startup
 PRODUCT_COPY_FILES += \
@@ -59,19 +53,19 @@ PRODUCT_COPY_FILES += \
 # Wifi
 PRODUCT_COPY_FILES += \
     device/lge/p350/prebuilt/wireless.ko:system/lib/modules/wireless.ko \
-    device/lge/p350/files/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    device/lge/p350/files/etc/dhcpd/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
+    device/lge/p350/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    device/lge/p350/configs/dhcpd/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
 
 # SD Card
 PRODUCT_COPY_FILES += \
-    device/lge/p350/files/etc/vold.fstab:system/etc/vold.fstab \
+    device/lge/p350/configs/vold.fstab:system/etc/vold.fstab \
 
 
 # Audio
 PRODUCT_COPY_FILES += \
-    device/lge/p350/files/etc/AudioFilter.csv:system/etc/AudioFilter.csv \
-    device/lge/p350/files/etc/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
-    device/lge/p350/files/etc/media_profiles.xml:system/etc/media_profiles.xml \
+    device/lge/p350/configs/AudioFilter.csv:system/etc/AudioFilter.csv \
+    device/lge/p350/configs/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
+    device/lge/p350/configs/media_profiles.xml:system/etc/media_profiles.xml \
 
 # Device permissions
 PRODUCT_COPY_FILES += \
